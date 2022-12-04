@@ -14,8 +14,8 @@ link.onclick = () => {
   let ccArray = ["a@gmail.com", "b@gmail.com"];
 
   let subIdRegex = /S-[0-9]*-[0-9]*/gm;
-  let policyNumberRegex = /[0-9]*\/[0-9]*\/ | [0-9]*\/[0-9]*\/[0-9]*\/[0-9]*\//;
-
+  let policyNumberRegex =
+    /[0-9]{6}\/[0-9]{2}\/[0-9]{4} | [0-9]{6}\/[0-9]{2}\/[0-9]{4}\/[0-9]{4}/gm;
   let policyNumberList = rulebookInputValue.match(policyNumberRegex);
   let submissionId = rulebookInputValue.match(subIdRegex);
   let assuredName = getStringBetween(
